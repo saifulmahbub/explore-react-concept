@@ -7,8 +7,22 @@ function App() {
   return (
     <>
       <h1>Vite + React</h1>
+      <Device name="mobile" price="100$"></Device>
+      <Device name="laptop" price="300$"></Device>
       <Person></Person>
+      <Student></Student>
+      <Developer></Developer>
     </>
+  );
+}
+
+function Device({ name, price }) {
+  return (
+    <div>
+      <h2>
+        this device:{name} and the price is {price}
+      </h2>
+    </div>
   );
 }
 
@@ -27,6 +41,28 @@ function Person() {
       </h2>
       <h2>busy</h2>
     </>
+  );
+}
+function Student() {
+  return (
+    <div className="person">
+      <h2>saiful</h2>
+      <h2>age:22</h2>
+    </div>
+  );
+}
+
+function Developer() {
+  const styledev = {
+    color: "yellow",
+    backgroundColor: "tomato",
+    border: "5px solid sky",
+  };
+  return (
+    <div style={styledev}>
+      <h5>devu devu</h5>
+      <p>coding</p>
+    </div>
   );
 }
 export default App;
