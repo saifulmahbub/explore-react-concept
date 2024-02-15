@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <h1>Vite + React</h1>
-      <Todo task="learn react"></Todo>
+      <Todo task="learn react" isDone="true"></Todo>
       <Device name="mobile" price="100$"></Device>
       <Device name="laptop" price="300$"></Device>
       <Person></Person>

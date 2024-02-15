@@ -1,10 +1,6 @@
-export default function Todo({ task }) {
-  return (
-    <div>
-      <li>i have to quite myself</li>
-      <li>task:{task}</li>
-      <li>spend more time one studing </li>
-      <li>dont go for the world !</li>
-    </div>
-  );
+export default function Todo({ task, isDone }) {
+  if (isDone) {
+    return <li>finished :{task}</li>;
+  }
+  return <li>work on:{task}</li>;
 }
