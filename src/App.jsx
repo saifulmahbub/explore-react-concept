@@ -5,9 +5,15 @@ import Todo from "./Todo";
 import "./App.css";
 import Actor from "./Actor";
 import Singer from "./Singer";
+import Book from "./Book";
 
 function App() {
   const actors = ["bappaRaj", "sakibKhan", "jasim", "rajjak", "slaman shah"];
+  const books = [
+    { id: 1, name: "History", price: 100 },
+    { id: 2, name: "Islam", price: 138 },
+    { id: 3, name: "Bukhari", price: 135 },
+  ];
   const singers = [
     { name: "mahfuz", age: 50 },
     { name: "eva Rahman", age: 38 },
@@ -16,16 +22,17 @@ function App() {
   return (
     <>
       <h1>Vite + React</h1>
-      <h1></h1>
+      {books.map((book) => (
+        <Book name={book.name} price={book.price}></Book>
+      ))}
+
       <Todo task="learn react" isDone="true"></Todo>
       <Actor name={"saiful islam"}></Actor>
       {actors.map((actor) => (
         <Actor name={" " + actor}></Actor>
       ))}
       {singers.map((singer) => (
-        <Singer name={singer.name} age={singer.age}>
-          Singer:
-        </Singer>
+        <Singer name={singer.name} age={singer.age}></Singer>
       ))}
       <Device name="mobile" price="100$"></Device>
       <Device name="laptop" price="300$"></Device>
